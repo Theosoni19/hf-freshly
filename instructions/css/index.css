@@ -1,0 +1,986 @@
+/* Importation de la feuille de style definissant des fontes */
+@import url("../css/font-face.css");
+
+
+/* Reset
+   ============================================================*/
+body {
+    margin: 0;
+}
+
+/* Définition des variables CSS
+   ============================================================*/
+:root {
+    --color-primary: #4c4343;
+    --color-secondary: #ebe3db;
+    --color-tertiary: #950000;
+    --font-size-default: 1.125rem;
+    --font-size-page-title: 1.875rem;
+    --font-size-sub-section: 1.5625rem;
+    --font-size-menu-title: 1.25rem;
+    --font-size-menu-price: 3.125rem;
+    --font-size-sub-menu: 0.9375rem;
+    --font-size-footer-title: 1.125rem;
+    --font-size-footer-text: 1rem;
+    --font-size-sorting-button: 1rem;
+    --font-size-form-button: 1rem;
+    --font-family-default: "Athiti", sans-serif;
+    --font-family-title: "Merienda", sans-serif;
+    --font-family-fontawesome: "Font Awesome 5 Free";
+}
+
+
+/* Typographie
+   ============================================================*/
+
+/* Police par défaut */
+body {
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-default);
+    font-weight: 500;
+}
+
+/* Police des titres */
+h1,
+h2,
+h3 {
+    font-family: var(--font-family-title);
+}
+
+/* Taille des titres de page */
+h1 {
+    font-size: var(--font-size-page-title);
+}
+
+/* Taille des titres de sous-rubriques */
+h2 {
+    font-size: var(--font-size-sub-section);
+}
+
+/* Taille des titres de menus */
+h3 {
+    font-size: var(--font-size-menu-title);
+}
+
+/* Taille des titres du footer */
+.footer h3 {
+    font-size: var(--font-size-footer-title);
+}
+
+
+/* Style général
+   ============================================================*/
+
+/* Modèle de boîte */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Style du corps du document */
+body {
+    /* Effet de dégradé en haut du corps du document */
+    background-image: linear-gradient(to bottom, #ebe3db, #fff);
+    background-size: auto 200px;
+    background-repeat: repeat-x;
+}
+
+/* Images responsives */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style décoratif des titres du main*/
+.main h1::before,
+.main h2::before,
+.main h3::before,
+.main h1::after,
+.main h2::after,
+.main h3::after {
+    content: "\f005";
+    padding-inline: 0.5rem;
+    font-family: var(--font-family-fontawesome);
+    color: var(--color-tertiary);
+    font-weight: 900;
+    font-size: 0.6rem;
+    vertical-align: middle;
+}
+
+/* Titres centrés */
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+/* Reset des figures */
+figure {
+    margin: 0;
+}
+
+/* Annulation de l'espace entre l'image du figure et le figcaption */
+figcaption {
+    margin-top: -0.5rem;
+}
+
+/* Reset des listes */
+ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Mise en forme des liens */
+a {
+    text-decoration: none;
+}
+
+/* Curseur sur les boutons */
+button {
+    cursor: pointer;
+}
+
+
+/* ============================================================
+   STYLE DE LA PAGE INDEX
+   ============================================================*/
+
+/* Mobile <=780px *********************************************
+
+
+
+/* ============================================================
+   Header
+   ============================================================*/
+
+.header {
+    margin-block: 3rem 2rem;
+}
+
+/* Brand
+   ============================================================*/
+a.brand {
+    display: block;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+}
+
+/* Logo */
+a.brand img {
+    width: 150px;
+    margin-inline: auto;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Titre du brand */
+a.brand .brand-title {
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2rem;
+    transition: 1s;
+}
+
+/* Icônes de part et d'autre du titre */
+a.brand .brand-title::before,
+a.brand .brand-title::after {
+    content: "\f005";
+    padding-inline: 0.5rem;
+    font-family: var(--font-family-fontawesome);
+    color: var(--color-tertiary);
+    font-weight: 900;
+    font-size: 0.6rem;
+    vertical-align: middle;
+}
+
+a.brand:hover div.brand-title {
+    color: var(--color-tertiary);
+}
+
+/* Navigation
+   ============================================================*/
+
+/* Pas de puces aux items de liste */
+.nav ul li {
+    list-style-type: none;
+}
+
+/* Style des liens du menu de navigation */
+.nav a {
+    display: block;
+    text-align: center;
+    padding-block: 1rem;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-weight: 900;
+    transition: 1s;
+}
+
+/* Style des liens au survol */
+.nav a:hover {
+    background-color: var(--color-tertiary);
+    color: var(--color-secondary);
+}
+
+/* Style de la page courante */
+.nav a.active {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+
+
+
+/* ============================================================
+   Main
+   ============================================================*/
+
+.main {
+    margin-inline: 2rem;
+}
+
+
+/* Zone héro
+   ============================================================*/
+
+/* Bouton précédent */
+.carousel-wrapper .slick-prev {
+    left: 20px;
+    z-index: 1;
+}
+
+/* Bouton suivant */
+.carousel-wrapper .slick-next {
+    right: 40px;
+}
+
+/* Flèches de navigation du carousel */
+.carousel-wrapper .slick-prev:before,
+.carousel-wrapper .slick-next:before {
+    font-size: 40px;
+}
+
+/* Couleur des dots du carousel */
+.carousel-wrapper .slick-dots li.slick-active button:before {
+    color: var(--color-tertiary);
+}
+
+.carousel-wrapper .slick-dots li button:before {
+    color: var(--color-tertiary);
+    font-size: 15px;
+}
+
+
+/* Section Bienvenue
+   ============================================================*/
+
+/* Espace en haut */
+.welcome {
+    margin-top: 6rem;
+}
+
+
+
+/* Section Special Menus
+   ============================================================*/
+
+/* Espace en haut */
+.special-menus {
+    margin-top: 3rem;
+}
+
+/* Style des menus */
+.special-menus article {
+    background-color: var(--color-secondary);
+    padding-block: 1rem 1.5rem;
+    margin-block: 1rem;
+}
+
+/* Style au survol des images des menus*/
+
+/* Style du parent de l'image et du modal */
+a.img-wrapper {
+    display: block;
+    position: relative;
+}
+
+/* Effet d'apparition au survol du lien */
+a.img-wrapper:hover div.menu-modal {
+    opacity: 1;
+}
+
+/* Style du modal des infos du menu */
+div.menu-modal {
+    opacity: 0;
+    background-color: rgba(76, 67, 67, .9);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    margin: 0;
+    width: 100%;
+    /* Ajuster la hauteur de ce bloc en extrayant l'espace négatif supérieur du figcaption */
+    height: calc(100% - 0.5rem);
+    text-align: center;
+    padding: 2rem;
+    transition: 1s;
+}
+
+/* Style du contenur des infos du menu */
+div.menu-modal > div {
+    border: 5px solid var(--color-secondary);
+    color: var(--color-secondary);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Reset des paragraphes du modal */
+div.menu-modal p {
+    margin: 0;
+}
+
+/* Style du prix du modal */
+p.menu-price {
+    font-size: var(--font-size-menu-price);
+}
+
+/* Style de la description du modal */
+p.menu-description {
+    font-size: var(--font-size-sub-menu);
+    font-style: italic;
+}
+
+
+
+/* Style de la liste des menus */
+.special-menus article ul li {
+    list-style-type: none;
+    border-bottom: 1px dashed var(--color-primary);
+    padding-left: 2rem;
+    padding-block: 0.7rem;
+}
+
+/* Style décoratif des items de liste des menus */
+.special-menus article ul li::before {
+    content: "\f005";
+    padding-inline: 0.5rem;
+    font-family: var(--font-family-fontawesome);
+    color: var(--color-tertiary);
+    font-weight: 900;
+    font-size: 0.6rem;
+    vertical-align: middle;
+}
+
+/* Style des liens de menus */
+.special-menus a.seemore {
+    display: block;
+    margin-inline: 3%;
+    margin-block: 2rem;
+    padding-block: 0.5rem;
+    text-align: center;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: 1px solid var(--color-primary);
+}
+
+/* Style des liens au survol */
+.special-menus a.seemore:hover {
+    background-color: var(--color-tertiary);
+    color: #fff;
+}
+
+/* Style décoratif des liens */
+.special-menus a.seemore::before {
+    content: "";
+    position: relative;
+    left: -10px;
+    padding-inline: 0.5rem;
+    vertical-align: middle;
+    background-image: url("../ressources/images/fork-knife.svg");
+    background-size: 1.6rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+/* ============================================================
+   Footer
+   ============================================================*/
+
+/* Espace en haut */
+.footer {
+    margin-top: 3rem;
+    background-image: url("../ressources/images/footer-bg.jpg");
+    background-size: cover;
+    text-align: center;
+    color: var(--color-secondary);
+}
+
+/* Style des sections */
+.footer section {
+    padding: 1rem 1.5rem;
+}
+
+/* Style des titres */
+.footer section h3 {
+    padding-block: 1rem;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.713);
+}
+
+/* Style des liens des sections */
+.footer section a {
+    color: var(--color-secondary);
+}
+
+/* Style de l'adresse de contact */
+address {
+    font-style: normal;
+}
+
+/* Espace supérieur du lien de téléphone */
+.footer a.tel-style {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* Style des icônes de la section 3 */
+.footer span {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-inline: 1rem;
+    font-weight: 400;
+}
+
+
+/* Style du copyright
+   ============================================================*/
+div.copyright {
+    padding: 2rem 3rem;
+    background-color: #444;
+    margin-inline: 0;
+}
+
+/* Reset des paragraphes */
+div.copyright p {
+    margin-inline: 0;
+}
+
+/* Style des liens du copyright */
+div.copyright a {
+    text-decoration: underline;
+    color: var(--color-secondary);
+}
+
+/* Taille de l'image */
+div.copyright img {
+    width: 50px;
+}
+
+
+
+
+
+/* ============================================================
+   Tablette >=780px
+   ============================================================*/
+
+@media (min-width: 780px) {
+
+
+    /* Navigation
+   ============================================================*/
+
+    .nav ul {
+        display: flex;
+        justify-content: space-around;
+        background-color: var(--color-secondary);
+    }
+
+    /* Style des liens du menu de navigation */
+    .nav a {
+        display: inline-block;
+        padding: 1rem 1rem;
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
+        border: 0;
+        font-weight: 900;
+        transition: 1s;
+    }
+
+    /* Footer main
+   ============================================================*/
+
+    .footer div.footer-main div.wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer div.footer-main section {
+        flex-basis: calc(100% / 3);
+    }
+
+}
+
+
+
+
+/* ============================================================
+   Desktop >=980px
+   ============================================================*/
+
+@media (min-width: 980px) {
+
+    /* Effet de dégradé en haut du corps du document */
+    body {
+        background-size: auto 50px;
+    }
+
+    .wrapper {
+        max-width: 1400px;
+        margin-inline: auto;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+
+    /* Navigation
+   ============================================================*/
+    a.brand {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .nav ul {
+        display: flex;
+        justify-content: space-around;
+        background-color: transparent;
+    }
+
+    .nav ul li {
+        margin-inline: 2rem;
+    }
+
+    /* Style des liens du menu de navigation */
+    .nav a {
+        display: inline-block;
+        padding: 1rem 1rem;
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
+        border: 0;
+        font-weight: 900;
+        transition: 1s;
+    }
+
+
+    article.welcome img {
+        float: right;
+        margin-left: 2rem;
+        width: 40%;
+    }
+
+    article.welcome {
+        margin-bottom: 4rem;
+    }
+
+    section.special-menus {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        column-gap: 1rem;
+    }
+
+    section.special-menus h2 {
+        flex-basis: 100%;
+    }
+
+    section.special-menus article {
+        flex-basis: calc((100% / 3) - 1rem);
+        margin: 0;
+    }
+
+}
+
+
+
+
+
+
+
+/* ============================================================
+   STYLE DE LA PAGE MENUS
+   ============================================================*/
+
+/* Mobile <=780px *********************************************/
+
+article.menus,
+section.deserts,
+section.cocktails {
+    text-align: center;
+}
+
+article.menus {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+div.toolbar {
+    margin-block: 2rem;
+}
+
+/* Style des boutons de la barre de filtre */
+div.toolbar button {
+    margin-inline: 1rem;
+    background-color: var(--color-secondary);
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    border: 0;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+}
+
+/* Au survol */
+div.toolbar button:hover {
+    background-color: var(--color-tertiary);
+    color: var(--color-secondary);
+}
+
+/* Disposition des images de menus */
+div.grid-menus {
+    background-color: var(--color-secondary);
+    padding: 3rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem 1rem;
+}
+
+div.grid-menus a {
+    flex-basis: calc((100% / 2) - 1rem);
+    box-shadow: 4px 4px 10px 1px rgba(1, 1, 1, 0.346);
+}
+
+div.grid-menus a img {
+    height: 100%;
+}
+
+
+div.grid-menus .menu-modal {
+    height: 100%;
+}
+
+/* Style de la description du modal */
+p.meal-description {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-);
+    font-style: italic;
+}
+
+p.meal-description::before {
+    content: "";
+    display: block;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-image: url("../ressources/images/fork-knife.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Effet modal sur les images de menus */
+div.grid-menus a.img-wrapper img {
+    transition: 2s;
+}
+
+/* Effet de zoom sur l'image au survol du lien */
+div.grid-menus a.img-wrapper:hover img {
+    transform: scale(1.1);
+}
+
+/* Effet de zoom au survol du lien */
+div.grid-menus a.img-wrapper:hover .menu-modal {
+    transform: scale(1.1);
+}
+
+section.deserts,
+section.cocktails {
+    margin-top: 4rem;
+}
+
+section.deserts h2,
+section.cocktails h2 {
+    margin-block: 2rem;
+}
+
+
+/* ============================================================
+   Tablette >=780px
+   ============================================================*/
+
+@media (min-width: 780px) {
+
+    div.grid-menus {
+        background-color: var(--color-secondary);
+        padding: 3rem 1rem;
+    }
+
+    div.grid-menus a {
+        flex-basis: calc((100% / 3) - 1rem);
+        box-shadow: 4px 4px 10px 1px rgba(1, 1, 1, 0.346);
+    }
+}
+
+
+
+
+
+
+/* ============================================================
+   STYLE DE LA PAGE CONTACT
+   ============================================================*/
+
+/* Mobile <=780px *********************************************/
+
+article.contact-us {
+    margin-top: 5rem;
+}
+
+section.location {
+    margin-top: 3rem;
+}
+
+article.contact-us p {
+    text-align: center;
+}
+
+/* Astérisque du required */
+span.required-star {
+    vertical-align: super;
+    padding-bottom: 0.5rem;
+    font-family: var(--font-family-fontawesome);
+    color: var(--color-tertiary);
+    font-weight: 900;
+    font-size: 0.4rem;
+    border-bottom: 1px dotted var(--color-tertiary);
+    font-style: italic;
+    translate: skew(10deg);
+}
+
+.form {
+    background-color: var(--color-secondary);
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form fieldset {
+    border: 0;
+    padding: 0;
+    margin-block: 1rem;
+}
+
+.form legend {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-sub-section);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.form div.input {
+    margin-bottom: 1rem;
+}
+
+/* Astérisque avant les input obligatoires */
+.form label:not(.request):before {
+    content: "\f005";
+    vertical-align: super;
+    padding-bottom: 0.3rem;
+    font-family: var(--font-family-fontawesome);
+    color: var(--color-tertiary);
+    font-weight: 900;
+    font-size: 0.4rem;
+    border-bottom: 1px dotted var(--color-tertiary);
+    position: relative;
+    left: -6px;
+    margin-left: -6px;
+}
+
+/* Style du label du textarea */
+.form label.request {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-sub-section);
+    font-weight: 700;
+    margin-block: 1rem;
+}
+
+/* Style des input et du textarea */
+.form input,
+.form textarea {
+    width: 100%;
+    border: 1px solid var(--color-primary);
+    border-radius: 0.4rem;
+    padding: 0.8rem 0.7rem;
+}
+
+/* Style du bouton de soumission */
+button[type=submit] {
+    margin-inline: auto;
+    padding: 0.8rem 8rem;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    margin-top: 2rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-primary);
+    font-weight: 500;
+}
+
+/* Au survol du bouton */
+button[type=submit]:hover {
+    background-color: #fff;
+    color: var(--color-primary);
+}
+
+/* ============================================================
+   Tablette >=780px
+   ============================================================*/
+
+@media (min-width: 780px) {
+
+    .form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .form fieldset {
+        flex-basis: calc(50% - 1rem);
+    }
+
+    .form>label,
+    .form>textarea,
+    .form>button {
+        flex-basis: 100%;
+    }
+
+}
+
+
+/* ============================================================
+   Desktop >=980px
+   ============================================================*/
+
+@media (min-width: 981px) {
+
+    .form {
+        width: 80%;
+        margin-inline: auto;
+    }
+}
+
+
+
+
+
+
+
+/* ============================================================
+   STYLE DE LA PAGE ABOUT
+   ============================================================*/
+
+/* Mobile <=780px *********************************************/
+
+article.about-us {
+    margin-top: 5rem;
+}
+
+section.priving-dining {
+    margin-top: 3rem;
+}
+
+.video {
+    width: 95%;
+    margin-inline: auto;
+    margin-block: 4rem;
+}
+
+.video video {
+    width: 100%;
+}
+
+.figure-wrapper {
+    background-color: var(--color-secondary);
+    padding: 2rem 1rem;
+    margin-block: 1rem;
+}
+
+.figure-wrapper figure {
+    margin-bottom: 2rem;
+}
+
+/* Effet sur l'image au survol du lien */
+.figure-wrapper figure a:hover img {
+    transform: scale(1.05);
+}
+
+.figure-wrapper figure img {
+    box-shadow: 4px 4px 10px 1px rgba(1, 1, 1, 0.346);
+    transition: 2s;
+}
+
+figcaption p {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+
+/* ============================================================
+   Tablette >=780px
+   ============================================================*/
+
+@media (min-width: 780px) {
+
+    .figure-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+    }
+
+    .figure-wrapper figure {
+        flex-basis: calc(50% - 2rem);
+    }
+
+    .figure-wrapper figure {
+        margin-bottom: 0rem;
+    }
+
+    .video {
+        width: 85%;
+        margin-inline: auto;
+    }
+}
+
+
+/* ============================================================
+   Desktop >=981px
+   ============================================================*/
+
+@media (min-width: 981px) {
+
+    .video {
+        width: 70%;
+        margin-inline: auto;
+    }
+}

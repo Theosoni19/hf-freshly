@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Entête du document -->
+<head>
+    <!-- Encodage des caractères -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Viewport: largeur de l'écran -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Description du site -->
+    <meta name="description" content="A Freshly Restaurant where you can eat delicious meals">
+    <!-- Mots clés -->
+    <meta name="keywords" content="Restaurant, Meals, Foods, Eat">
+    <!-- Favicon -->
+    <link rel="icon" href="ressources/images/favicon.png" type="image/png">
+    <!-- Importation de la feuille de style externe -->
+    <link rel="stylesheet" href="css/index.css">
+    
+    <!-- Importation de la bibliothèque d'icones Fontawesone -->
+    <script src="https://kit.fontawesome.com/dd3ee9631d.js" crossorigin="anonymous"></script>
+
+    <!-- Titre de la page -->
+    <title>Freshly Restaurant - Best foods of America</title>
+</head>
+
+<!-- Corps du document -->
+<body>
+
+    <!-- NOTE: Section = partie sectionnée du corps du document -->
+
+    <!-- Header -->
+    <header class="header wrapper">
+
+        <!-- Brand -->
+        <a href="index.html" title="Freshly Restaurant" class="brand">
+            <img src="ressources/images/logo.png" alt="Logo Freshly Restaurant">
+            <div class="brand-title">Freshly Restaurant</div>
+        </a>
+
+        <!-- Menu de navigation -->
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="menus.html" >Menus</a>
+                </li>
+                <li>
+                    <a href="#" class="active">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Main -->
+    <main class="main wrapper">
+        <article class="contact-us">
+            <h1>Contact us</h1>
+            <p>If your want to make a reservation, please complete this form.</p>
+            <p><em>Fields with <span class="fas fa-star required-star"></span> are required.</em></p>
+            <form action="#" method="post">
+                <div class="form">
+                    <fieldset>
+                        <legend>Reservation</legend>
+                        <div class="input">
+                            <label for="date">Date</label>
+                            <input type="date" name="" id="date" required>
+                        </div>
+                        <div class="input">
+                            <label for="time">Time</label>
+                            <input type="time" name="" id="time" required>
+                        </div>
+                        <div class="input">
+                            <label for="guests">Number of guests</label>
+                            <input type="number" name="" id="guests" required>
+                        </div>
+                    </fieldset> 
+                    <fieldset>
+                        <legend>Detail</legend>
+                        <div class="input">
+                            <label for="name">Name</label>
+                            <input type="text" name="" id="name" required>
+                        </div>
+                        <div class="input">
+                            <label for="email">Email</label>
+                            <input type="email" name="" id="email">
+                        </div>
+                        <div class="input">
+                            <label for="telephone">Telephone</label>
+                            <input type="tel" name="" id="telephone" required>
+                        </div>
+                    </fieldset>
+                    <label for="request" class="request">Further request</label>
+                    <textarea name="" id="request" rows="8"></textarea>
+                    <button type="submit">Reserve</button>
+                </div>
+            </form>
+        </article>
+        <section class="location">
+            <h2>Our location</h2>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="wrapper">
+             <!-- Section Opening Hours -->
+                <section>
+                    <h3>Opening hours</h3>
+                    <p>Monday: Closed <br>
+                    Tue-Wed : 9am - 10pm <br>
+                    Thu-Fri : 9am - 10pm <br>
+                    Sat-Sun : 5pm - 10pm</p>
+                </section>
+                <!-- Section Contact -->
+                <section>
+                    <h3>Contact</h3>
+                    <address>
+                        <p> 13 Christopher Street <br>
+                            New York, <br>
+                            NY 10014-3543 <br>
+                            <a href="tel:+0120008009999" class="tel-style">+01 2000 800 9999</a>
+                        </p>
+                    </address>
+                </section>
+                <!-- Section Social networks -->
+                <section>
+                    <h3>Social Networks</h3>
+                    <div>
+                        <a href="https://facebook.com/freshlyrestaurant">
+                            <span class="fas fab fa-facebook-f"></span>
+                        </a>
+                        <a href="https://instagram.com/freshlyrestaurant">
+                            <span class="fas fab fa-instagram"></span>
+                        </a>
+                        <a href="https://pinterest.com/freshlyrestaurant">
+                            <span class="fas fab fa-pinterest-p"></span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="wrapper">
+                <a rel="license" href="https://3wa.fr">
+                    <img src="ressources/images/logo-3wa.png" alt="Logo 3W Academy">
+                </a>
+                <p>Cet exercice de <a href="https://3wa.fr">3W Academy</a> est mis à disposition <a href="https://3wa.fr/propriete-materiel-pedagogique">pour l'usage personel des étudiants. Pas de rédiffusion : Attribution - Pas d'Utilisation Commerciale - Pas de modification - International</a>. Les autorisations au-delà du champ de cette licence peuvent être obtenues auprès de <a href="mailto:contact@3wa.fr">contact@3wa.fr</a>. Les maquettes ont été réalisées par <a href="https://twitter.com/CatherineDenos">Cathérine Dénos</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

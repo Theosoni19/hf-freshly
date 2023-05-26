@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Entête du document -->
+<head>
+    <!-- Encodage des caractères -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Viewport: largeur de l'écran -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Description du site -->
+    <meta name="description" content="A Freshly Restaurant where you can eat delicious meals">
+    <!-- Mots clés -->
+    <meta name="keywords" content="Restaurant, Meals, Foods, Eat">
+    <!-- Favicon -->
+    <link rel="icon" href="ressources/images/favicon.png" type="image/png">
+    <!-- Importation de la feuille de style externe -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Importation de la bibliothèque d'icones Fontawesone -->
+    <script src="https://kit.fontawesome.com/dd3ee9631d.js" crossorigin="anonymous"></script>
+
+    <!-- Importation de jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    
+    <!-- Importation de Mixitup -->
+    <script src="ressources/mixitup-3/mixitup.js"></script>
+
+    <!-- Importation du fichier Javascript personnalisé -->
+    <script src="js/index.js"></script>
+
+
+    <!-- Titre de la page -->
+    <title>Freshly Restaurant - Best foods of America</title>
+</head>
+
+<!-- Corps du document -->
+<body>
+
+    <!-- NOTE: Section = partie sectionnée du corps du document -->
+
+    <!-- Header -->
+    <header class="header wrapper">
+
+        <!-- Brand -->
+        <a href="index.html" title="Freshly Restaurant" class="brand">
+            <img src="ressources/images/logo.png" alt="Logo Freshly Restaurant">
+            <div class="brand-title">Freshly Restaurant</div>
+        </a>
+
+        <!-- Menu de navigation -->
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="#" class="active">Menus</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Main -->
+    <main class="main wrapper">
+        <article class="menus" id="menus-details">
+            <h1>Details of our menus</h1>
+            <p>Choose your main course according to your menu !</p>
+            <div class="toolbar">
+                <button type="button" data-filter="all">All</button>
+                <button type="button" data-filter=".meat">Meat</button>
+                <button type="button" data-filter=".vegan">Vegan</button>
+                <button type="button" data-filter=".fish">Fish</button>
+            </div>
+            <div class="grid-menus" id="mixer-container">
+                <a href="#menus-details" class="img-wrapper mix fish">
+                    <img src="ressources/menus/fish-01.jpg" alt="Grilled mussels">
+                    <div class="menu-modal">
+                        <div>
+                            <p class="meal-description">Grilled mussels</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#menus-details" class="img-wrapper mix vegan">
+                    <img src="ressources/menus/vegan-03.jpg" alt="Mixed vegetables">
+                    <div class="menu-modal">
+                        <div>
+                            <p class="meal-description">Mixed vegetables</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#menus-details" class="img-wrapper mix meat">
+                    <img src="ressources/menus/meat-03.jpg" alt="Freshly kebabs">
+                    <div class="menu-modal">
+                        <div>
+                            <p class="meal-description">Freshly kebabs</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#menus-details" class="img-wrapper mix fish">
+                    <img src="ressources/menus/fish-02.jpg" alt="Cajun shrimp">
+                    <div class="menu-modal">
+                        <div>
+                            <p class="meal-description">Cajun shrimp</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#menus-details" class="img-wrapper mix meat">
+                    <img src="ressources/menus/meat-01.jpg" alt="Freshly burger">
+                    <div class="menu-modal">
+                        <div>
+                            <p class="meal-description">Freshly burger</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#menus-details" class="img-wrapper mix vegan">
+                    <img src="ressources/menus/vegan-02.jpg" alt="Grilled eggplants">
+                    <div class="menu-modal">
+                        <div>
+                            <p class="meal-description">Grilled eggplants</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#menus-details" class="img-wrapper mix meat">
+                    <img src="ressources/menus/meat-02.jpg" alt="Beef stew with pasta">
+                    <div class="menu-modal">
+                        <div>
+                            <p class="meal-description">Beef stew with pasta</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#menus-details" class="img-wrapper mix fish">
+                    <img src="ressources/menus/fish-03.jpg" alt="Grilled salmon">
+                    <div class="menu-modal">
+                        <div>
+                            <p class="meal-description">Grilled salmon</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#menus-details" class="img-wrapper mix vegan">
+                    <img src="ressources/menus/vegan-01.jpg" alt="Vegetable Jambalaya">
+                    <div class="menu-modal">
+                        <div>
+                            <p class="meal-description">Vegetable Jambalaya</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </article>
+        <section class="deserts" id="deserts">
+            <h2>Deserts</h2>
+            <p>Here are the deserts you can choose to finish your meal (included in your menu).</p>
+            <div class="grid-menus">
+                <a href="#deserts" class="img-wrapper">
+                    <img src="ressources/menus/desert-01.jpg" alt="Tiramisu">
+                    <div class="menu-modal">
+                        <div>
+                            <p class="meal-description">Tiramisu</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#deserts" class="img-wrapper">
+                    <img src="ressources/menus/desert-02.jpg" alt="Freshly Pancakes">
+                    <div class="menu-modal">
+                        <div>
+                            <p class="meal-description">Freshly Pancakes</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#deserts" class="img-wrapper">
+                    <img src="ressources/menus/desert-03.jpg" alt="Redberries cup">
+                    <div class="menu-modal">
+                        <div>
+                            <p class="meal-description">Redberries cup</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="cocktails" id="cocktails">
+            <h2>Cocktails</h2>
+            <p>Soft drinkgs are included, but if you want you can order one of our excellent cocktails (not included in the menu).</p>
+            <div class="grid-menus">
+                <a href="#cocktails" class="img-wrapper">
+                    <img src="ressources/menus/drink-01.jpg" alt="Winter Whiskey">
+                    <div class="menu-modal">
+                        <div>
+                            <p class="meal-description">Winter Whiskey</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#cocktails" class="img-wrapper">
+                    <img src="ressources/menus/drink-02.jpg" alt="Paloma cocktail">
+                    <div class="menu-modal">
+                        <div>
+                            <p class="meal-description">Paloma cocktail</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#cocktails" class="img-wrapper">
+                    <img src="ressources/menus/drink-03.jpg" alt="Bellini cocktail">
+                    <div class="menu-modal">
+                        <div>
+                            <p class="meal-description">Bellini cocktail</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="wrapper">
+             <!-- Section Opening Hours -->
+                <section>
+                    <h3>Opening hours</h3>
+                    <p>Monday: Closed <br>
+                    Tue-Wed : 9am - 10pm <br>
+                    Thu-Fri : 9am - 10pm <br>
+                    Sat-Sun : 5pm - 10pm</p>
+                </section>
+                <!-- Section Contact -->
+                <section>
+                    <h3>Contact</h3>
+                    <address>
+                        <p> 13 Christopher Street <br>
+                            New York, <br>
+                            NY 10014-3543 <br>
+                            <a href="tel:+0120008009999" class="tel-style">+01 2000 800 9999</a>
+                        </p>
+                    </address>
+                </section>
+                <!-- Section Social networks -->
+                <section>
+                    <h3>Social Networks</h3>
+                    <div>
+                        <a href="https://facebook.com/freshlyrestaurant">
+                            <span class="fas fab fa-facebook-f"></span>
+                        </a>
+                        <a href="https://instagram.com/freshlyrestaurant">
+                            <span class="fas fab fa-instagram"></span>
+                        </a>
+                        <a href="https://pinterest.com/freshlyrestaurant">
+                            <span class="fas fab fa-pinterest-p"></span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="wrapper">
+                <a rel="license" href="https://3wa.fr">
+                    <img src="ressources/images/logo-3wa.png" alt="Logo 3W Academy">
+                </a>
+                <p>Cet exercice de <a href="https://3wa.fr">3W Academy</a> est mis à disposition <a href="https://3wa.fr/propriete-materiel-pedagogique">pour l'usage personel des étudiants. Pas de rédiffusion : Attribution - Pas d'Utilisation Commerciale - Pas de modification - International</a>. Les autorisations au-delà du champ de cette licence peuvent être obtenues auprès de <a href="mailto:contact@3wa.fr">contact@3wa.fr</a>. Les maquettes ont été réalisées par <a href="https://twitter.com/CatherineDenos">Cathérine Dénos</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
